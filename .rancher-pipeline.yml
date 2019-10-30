@@ -14,8 +14,10 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: example-helloserver:${CICD_EXECUTION_SEQUENCE}
+      tag: test-helloserver:${CICD_EXECUTION_SEQUENCE}
+      registry: 127.0.0.1:34046
 - name: Deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+notification: {}
