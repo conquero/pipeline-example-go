@@ -15,7 +15,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: test-helloserver:${CICD_EXECUTION_SEQUENCE}
-      registry: 127.0.0.1:34046
+      registry: 192.168.166.229
 - name: Deploy
   steps:
   - applyYamlConfig:
