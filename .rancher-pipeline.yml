@@ -14,9 +14,9 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: test-helloserver:${CICD_EXECUTION_SEQUENCE}
+      tag: rancher/test-helloserver:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: 192.168.166.229:80
+      registry: index.docker.io
 - name: Deploy
   steps:
   - applyYamlConfig:
